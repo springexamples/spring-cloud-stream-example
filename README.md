@@ -18,6 +18,6 @@ http > stringSupplier > upperCase > log
 
 ```  
 
-* http endpoint accept string and publish it to stringSupplier function, which put it in `upperCase.topic` destination.
-* an upperCase function, read the string from the `upperCase.topic` destination and convert it into person name with upper case and put it in `log.topic` destination.
-* a log consumer read the person object from `log.topic` destination and log it to stdout.
+* http endpoint accept string and publish it to stringSupplier *supplier*, which put it in `upperCase.topic` destination.
+* an upperCase *function*, read the string from the `upperCase.topic` destination and convert it into person with upper case name and put it in `log.topic` destination.
+* a log *consumer* reads the person object from `log.topic` destination and log it to stdout.
