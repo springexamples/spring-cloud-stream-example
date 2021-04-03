@@ -14,3 +14,11 @@ spring:
         log-in-0:
           destination: log.topic
           group: logging-consumer
+      rabbit:
+        bindings:
+          upperCase-in-0:
+            consumer:
+              auto-bind-dlq: true
+          log-in-0:
+            consumer:
+              auto-bind-dlq: true

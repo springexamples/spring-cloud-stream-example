@@ -40,7 +40,12 @@ public class LoggingConsumerApplication {
 
     @Bean
     public Consumer<Person> log() {
-        return person -> System.out.println("Received: " + person);
+        return person -> {
+            if ("ALI".equals(person.name)) {
+                throw new RuntimeException("cannot process: " + person);
+            }
+            System.out.println("Received: " + person);
+        };
     }
 
 
