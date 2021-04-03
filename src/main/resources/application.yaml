@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    function:
+      definition: upperCase;log;stringSupplier
+    stream:
+      bindings:
+        stringSupplier-out-0:
+          destination: upperCase.topic
+        upperCase-in-0:
+          destination: upperCase.topic
+          group: logging-consumer
+        upperCase-out-0:
+          destination: log.topic
+        log-in-0:
+          destination: log.topic
+          group: logging-consumer
