@@ -3,12 +3,16 @@
 ### To trigger the stream:
 
 ```
-curl localhost:8080/<some value>
+curl localhost:8080/<some name>
 ```
 e.g.:
 ```
-curl -XGET http://localhost:8080/this%20this%20sparta
+curl -XGET http://localhost:8080/Mohammad%20Hewedy
 ``` 
+output:
+```
+Received: Person{name='MOHAMMAD HEWEDY'}
+```
 
 
 ### what is happening:

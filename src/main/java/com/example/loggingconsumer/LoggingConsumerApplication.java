@@ -40,7 +40,7 @@ public class LoggingConsumerApplication {
 
     @Bean
     public Consumer<Person> log() {
-        return person -> System.out.println("Received: " + person.name);
+        return person -> System.out.println("Received: " + person);
     }
 
 
@@ -52,6 +52,13 @@ public class LoggingConsumerApplication {
 
         public Person(String name) {
             this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    '}';
         }
     }
 
